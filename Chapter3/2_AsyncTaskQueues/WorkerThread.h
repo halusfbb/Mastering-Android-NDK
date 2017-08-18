@@ -151,7 +151,7 @@ protected:
 		}
 	}
 
-	virtual void NotifyExit()
+	virtual void NotifyExit() override
 	{
 		FCondition.notify_all();
 	}
