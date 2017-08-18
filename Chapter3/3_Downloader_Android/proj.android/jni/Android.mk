@@ -5,12 +5,12 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE    := Crypto
 LOCAL_SRC_FILES := ../../../../Libs.Android/libCrypto.$(TARGET_ARCH_ABI).a
-LOCAL_EXPORT_C_INCLUDES := ../openssl/include
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../openssl/include
 include $(PREBUILT_STATIC_LIBRARY)
 
 LOCAL_MODULE    := SSL
 LOCAL_SRC_FILES := ../../../../Libs.Android/libSSL.$(TARGET_ARCH_ABI).a
-LOCAL_EXPORT_C_INCLUDES := ../openssl/include
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../openssl/include
 include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
